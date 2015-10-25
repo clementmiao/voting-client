@@ -6,7 +6,8 @@
   "repository": "https://github.com/clementmiao/voting-app.git",
   "scripts": {
     "star": "webpack-dev-server",
-    "start": "NODE_ENV=production webpack -p --config webpack.production.config.js",
+    "start": "node server.js",
+    "postinstall": "webpack --config ./webpack.production.config.js --progress --colors",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js 'test/**/*.@(js|jsx)'",
     "test:watch": "npm run test -- --watch"
   },
@@ -29,7 +30,9 @@
   },
   "dependencies": {
     "classnames": "^2.2.0",
+    "express": "^4.13.3",
     "immutable": "^3.7.5",
+    "path": "^0.12.7",
     "react": "^0.14.0",
     "react-addons-pure-render-mixin": "^0.14.0",
     "react-dom": "^0.14.0",
