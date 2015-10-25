@@ -13,7 +13,7 @@ var config = {
   module: {
     loaders: [{
       test: /\.jsx$/,
-      loader: 'react-hot!babel',
+      loader: 'babel',
       exclude: [nodeModulesDir],
       loader: 'babel',
     }, {
