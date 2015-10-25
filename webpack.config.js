@@ -1,9 +1,11 @@
 var webpack = require('webpack');
 
+var port = process.env.PORT || 8080;
+
 module.exports = {
   entry: [
     // 'webpack-dev-server/client?http://voting-server.clementmiao.com',
-    'webpack-dev-server/client?http://localhost:8080',
+    'webpack-dev-server/client?http://localhost:' + port,
     'webpack/hot/only-dev-server',
     './src/index.jsx',
   ],
